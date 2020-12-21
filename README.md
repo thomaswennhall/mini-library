@@ -1,24 +1,6 @@
 # mini-library
 
-## Project setup
-```
-npm install
-```
+Built with Vue.js
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Using two different views that can be navigated through with router links, 
+one reusable component and data from an imported json-file.
