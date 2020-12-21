@@ -1,11 +1,12 @@
 <template>
   <div id="home">
+    <h1>{{books.length}} Classic Children's books</h1>
     <router-link 
       v-for="book in books"
       v-bind:key="book.id"
       v-bind:to="'/books/' + book.id"
     >
-      <Book v-bind:value="book"/>
+      <Book v-bind:book="book"/>
     </router-link>
   </div>
 </template>
@@ -14,7 +15,7 @@
     import Book from '../components/Book'
 
     export default {
-    components: { Book },
+    components: {Book},
 
     computed: {
         books(){
