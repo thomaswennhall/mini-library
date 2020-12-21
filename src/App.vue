@@ -1,27 +1,16 @@
 <template>
   <div id="app">
-    <router-link 
-      v-for="book in books"
-      v-bind:key="book.id"
-      to="/"
-    >
-      {{ book.color }}
-    </router-link>
-    <router-view/>
+     <router-view/>
   </div>
 </template>
 
 <script>
-export default {
 
-  computed: {
-    books(){
-      return this.$root.books
-    }
-  }
-}
 </script>
 
 <style>
-
+  #app{
+    height: 100vh;
+    width: 100vw;
+  }
 </style>

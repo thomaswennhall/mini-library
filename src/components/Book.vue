@@ -1,15 +1,16 @@
 <template>
-  
+  <div>
+      <h1>{{book.title}}</h1>
+      <p>{{book.author}}</p>
+  </div>
 </template>
 
 <script>
 export default {
-    computed: {
-        books(){
-        return this.$root.books
-    }},
-    data() { return {
-    }}
+    props: {
+        book: Object
+    }
+  
 }
 </script>
 
