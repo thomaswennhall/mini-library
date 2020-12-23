@@ -1,8 +1,8 @@
 <template>
-  <article v-bind:style="cssVars">
+  <article v-bind:style="cssVar">
       <div class="bordered">
-        <h2>{{book.title}}</h2>
-        <p>{{book.author}}</p>
+        <h2 v-bind:class="{large: isLarge}">{{book.title}}</h2>
+        <p v-bind:class="{large: isLarge}">{{book.author}}</p>
       </div>
   </article>
 </template>
@@ -10,11 +10,12 @@
 <script>
 export default {
     props: {
-        book: Object
+        book: Object,
+        isLarge: String
     },
 
     computed: {
-        cssVars() {
+        cssVar() {
             return {
                 "--bg-color": this.book.color
             }
@@ -41,12 +42,21 @@ export default {
     }
     h2, p {
         color: white;
-        text-decoration: none;
     }
     h2{
         font-size: 0.8rem;
     }
     p{
         font-size: 0.6rem;
+        font-weight: 400;
+    }
+    .large{
+        color: black;
+    }
+    h2.large{
+        font-size: 1.6rem;
+    }
+    p.large{
+        font-size: 1rem;
     }
 </style>

@@ -35,6 +35,7 @@
   }
 
   #library{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 25%);
     grid-auto-rows: 180px;
